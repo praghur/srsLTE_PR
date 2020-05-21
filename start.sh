@@ -8,6 +8,8 @@ if [ $NODE_ID = "rue1" ]; then
     /local/repository/start-ue.sh
 elif [ $NODE_ID = "enb1" ]; then
     /local/repository/start-enb.sh
+elif [ $NODE_ID = "epc" ]; then
+    /local/repository/start-epc.sh
 else
     echo "no setup necessary"
 fi

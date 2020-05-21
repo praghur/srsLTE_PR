@@ -11,7 +11,7 @@ tourDescription = """
 
 Use this profile to intantiate an end-to-end LTE network using simulated links
 between eNB and UE (sending baseband IQ samples back and forth via ZMQ instead
-of transmitting over the air via SDRs). Three d430 compute nodes will be
+of transmitting over-the-air via SDRs). Three d430 compute nodes will be
 deployed (`epc`, `enb1`, and `rue1`), each with srsLTE 20.04.1, and connected to
 the same LAN.
 
@@ -28,8 +28,9 @@ cd /local/repository
 ```
 
 This will start a `tmux` session with two panes. The first one will be running
-`srsepc`, while the second can be used to run tests with `ping` or `iperf`. If
-you are not familiar with `tmux`, it's a terminal multiplexer that has some
+`srsepc`, while the second can be used to run tests with `ping` or `iperf`.
+
+If you are not familiar with `tmux`, it's a terminal multiplexer that has some
 similarities to screen. Here's a [tmux cheat sheet](https://tmuxcheatsheet.com),
 but `ctrl-b o` (move to other pane) and `ctrl-b x` (kill pane), should get you
 pretty far. `ctrl-b d` will detach you from the `tmux` session and leave it
@@ -41,9 +42,13 @@ see `srsepc` react to this as some handshaking occurs.
 
 Finally, login to `rue1` and repeat the previous commands one last time. This
 will start yet another `tmux` session with two panes. The first will be running
-`srsue`, while the second can be used to run other commands. `srsue` will sync
-with `srsenb` while using ZMQ to pass baseband IQ samples back and forth, as
-opposed to sending them to an SDR for transmission over the air.
+`srsue`, while the second can be used to run other commands. `srsue` should sync
+with `srsenb`, create a TUN interface called `tun_srsue` and obtain an IP
+address. After sync you can ping `srsepc` with:
+
+```
+ping 172.16.0.1
+```
 
 If you'd like to start everything manually, here are the commands:
 

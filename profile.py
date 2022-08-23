@@ -7,7 +7,7 @@ import geni.rspec.emulab.pnext as PN
 
 tourDescription = """
 
-# srsLTE Simulated RF
+### srsLTE Simulated RF
 
 Use this profile to intantiate an end-to-end LTE network using simulated links
 between eNB and UE (sending baseband IQ samples back and forth via ZMQ instead

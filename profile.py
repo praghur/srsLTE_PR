@@ -113,8 +113,8 @@ link = request.LAN("lan")
 link.addInterface(iface1)
 link.addInterface(iface2)
 link.addInterface(iface3)
-link1.addInterface(iface4)
-link1.addInterface(iface5)
+link.addInterface(iface4)
+link.addInterface(iface5)
 
 link.link_multiplexing = True
 link.vlan_tagging = True

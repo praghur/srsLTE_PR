@@ -89,11 +89,11 @@ iface2 = enb1.addInterface("eth1")
 iface2.addAddress(rspec.IPv4Address("10.10.1.2", "255.255.255.0"))
 
 # Add eNB2 node
-#enb2 = request.RawPC("enb2")
-#enb2.hardware_type = GLOBALS.HWTYPE
-#enb2.disk_image = GLOBALS.SRSLTE_IMG
-#iface4 = enb2.addInterface("eth1")
-#iface4.addAddress(rspec.IPv4Address("10.10.1.3", "255.255.255.0"))
+enb2 = request.RawPC("enb2")
+enb2.hardware_type = GLOBALS.HWTYPE
+enb2.disk_image = GLOBALS.SRSLTE_IMG
+iface4 = enb2.addInterface("eth1")
+iface4.addAddress(rspec.IPv4Address("10.10.1.3", "255.255.255.0"))
 
 # Add LL UE1 node
 rue1 = request.RawPC("rue1")

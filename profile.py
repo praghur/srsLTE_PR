@@ -81,7 +81,7 @@ epc.disk_image = GLOBALS.SRSLTE_IMG
 iface1 = epc.addInterface("eth1")
 iface1.addAddress(rspec.IPv4Address("10.10.1.1", "255.255.255.0"))
 
-# Add eNB node
+# Add eNB1 node
 enb1 = request.RawPC("enb1")
 enb1.hardware_type = GLOBALS.HWTYPE
 enb1.disk_image = GLOBALS.SRSLTE_IMG
@@ -95,12 +95,12 @@ enb2.disk_image = GLOBALS.SRSLTE_IMG
 iface4 = enb2.addInterface("eth1")
 iface4.addAddress(rspec.IPv4Address("10.10.1.3", "255.255.255.0"))
 
-# Add UE node
+# Add LL UE1 node
 rue1 = request.RawPC("rue1")
 rue1.hardware_type = GLOBALS.HWTYPE
 rue1.disk_image = GLOBALS.SRSLTE_IMG
 iface3 = rue1.addInterface("eth1")
-iface3.addAddress(rspec.IPv4Address("10.10.1.3", "255.255.255.0"))
+iface3.addAddress(rspec.IPv4Address("10.10.1.4", "255.255.255.0"))
 
 # Add LL UE2 node
 rue2 = request.RawPC("rue2")

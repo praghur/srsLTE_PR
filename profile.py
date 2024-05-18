@@ -103,18 +103,18 @@ iface3 = rue1.addInterface("eth1")
 iface3.addAddress(rspec.IPv4Address("10.10.1.4", "255.255.255.0"))
 
 # Add LL UE2 node
-#rue2 = request.RawPC("rue2")
-#rue2.hardware_type = GLOBALS.HWTYPE
-#rue2.disk_image = GLOBALS.SRSLTE_IMG
-#iface5 = rue2.addInterface("eth1")
-#iface5.addAddress(rspec.IPv4Address("10.10.1.5", "255.255.255.0"))
+rue2 = request.RawPC("rue2")
+rue2.hardware_type = GLOBALS.HWTYPE
+rue2.disk_image = GLOBALS.SRSLTE_IMG
+iface5 = rue2.addInterface("eth1")
+iface5.addAddress(rspec.IPv4Address("10.10.1.5", "255.255.255.0"))
 
 link = request.LAN("lan")
 link.addInterface(iface1)
 link.addInterface(iface2)
 link.addInterface(iface3)
 link.addInterface(iface4)
-#link.addInterface(iface5)
+link.addInterface(iface5)
 
 link.link_multiplexing = True
 link.vlan_tagging = True

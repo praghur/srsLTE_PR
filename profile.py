@@ -110,11 +110,11 @@ iface5 = rue2.addInterface("eth1")
 iface5.addAddress(rspec.IPv4Address("10.10.1.5", "255.255.255.0"))
 
 # Add eNB3_Remote node
-enb3r = request.RawPC("enb3r")
-enb3r.hardware_type = GLOBALS.HWTYPE
-enb3r.disk_image = GLOBALS.SRSLTE_IMG
-iface6 = enb3r.addInterface("eth2")
-iface6.addAddress(rspec.IPv4Address("172.168.1.2", "255.255.255.0"))
+#enb3r = request.RawPC("enb3r")
+#enb3r.hardware_type = GLOBALS.HWTYPE
+#enb3r.disk_image = GLOBALS.SRSLTE_IMG
+#iface6 = enb3r.addInterface("eth2")
+#iface6.addAddress(rspec.IPv4Address("172.168.1.2", "255.255.255.0"))
 
 link = request.LAN("lan")
 link.addInterface(iface1)
@@ -122,7 +122,7 @@ link.addInterface(iface2)
 link.addInterface(iface3)
 link.addInterface(iface4)
 link.addInterface(iface5)
-link.addInterface(iface6)
+#link.addInterface(iface6)
 
 link.link_multiplexing = True
 link.vlan_tagging = True

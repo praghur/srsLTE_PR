@@ -1,7 +1,7 @@
 #!/bin/bash
 set -ux
-tmux new-session -d -s ue
+tmux new-session -d -s ue2
 tmux send-keys 'sudo srsue /local/repository/etc/ue2.conf' C-m
 tmux split-window -v
 tmux select-layout even-vertical
-tmux attach-session -d -t ue
+tmux attach-session -d -t ue2

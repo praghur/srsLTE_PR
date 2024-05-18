@@ -12,6 +12,8 @@ elif [ $NODE_ID = "enb1" ]; then
     /local/repository/start-enb1.sh
 elif [ $NODE_ID = "enb2" ]; then
     /local/repository/start-enb2.sh
+elif [ $NODE_ID = "enb3r" ]; then
+    /local/repository/start-enb3r.sh
 elif [ $NODE_ID = "epc" ]; then
     /local/repository/start-epc.sh
 else

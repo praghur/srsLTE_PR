@@ -144,9 +144,9 @@ link1.link_multiplexing = True
 link1.vlan_tagging = True
 link1.best_effort = True
 
-link2.link_multiplexing = True
-link2.vlan_tagging = True
-link2.best_effort = True
+#link2.link_multiplexing = True
+#link2.vlan_tagging = True
+#link2.best_effort = True
 
 tour = IG.Tour()
 tour.Description(IG.Tour.MARKDOWN, tourDescription)

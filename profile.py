@@ -109,6 +109,13 @@ rue2.disk_image = GLOBALS.SRSLTE_IMG
 iface5 = rue2.addInterface("eth1")
 iface5.addAddress(rspec.IPv4Address("10.10.1.5", "255.255.255.0"))
 
+# Add LL UE3 node
+rue3 = request.RawPC("rue3")
+rue3.hardware_type = GLOBALS.HWTYPE
+rue3.disk_image = GLOBALS.SRSLTE_IMG
+iface7 = rue2.addInterface("eth1")
+iface7.addAddress(rspec.IPv4Address("172.168.1.3", "255.255.255.0"))
+
 # Add eNB3_Remote node
 enb3r = request.RawPC("enb3r")
 enb3r.hardware_type = GLOBALS.HWTYPE
@@ -129,6 +136,7 @@ link1.addInterface(iface5)
 
 link2.addInterface(iface1a)
 link2.addInterface(iface6)
+link2.addInterface(iface7)
 
 link1.link_multiplexing = True
 link1.vlan_tagging = True

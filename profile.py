@@ -125,7 +125,7 @@ iface6.addAddress(rspec.IPv4Address("10.10.1.8", "255.255.255.0"))
 
 # Create two separate LAN links
 link1 = request.LAN("lan1")
-link2 = request.LAN("lan2")
+#link2 = request.LAN("lan2")
 
 # Add interfaces to each LAN link
 link1.addInterface(iface1)

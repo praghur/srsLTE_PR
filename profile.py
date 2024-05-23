@@ -113,7 +113,7 @@ iface5.addAddress(rspec.IPv4Address("10.10.1.5", "255.255.255.0"))
 rue3 = request.RawPC("rue3")
 rue3.hardware_type = GLOBALS.HWTYPE
 rue3.disk_image = GLOBALS.SRSLTE_IMG
-iface7 = rue2.addInterface("eth1")
+iface7 = rue3.addInterface("eth1")
 iface7.addAddress(rspec.IPv4Address("172.168.1.3", "255.255.255.0"))
 
 # Add eNB3_Remote node

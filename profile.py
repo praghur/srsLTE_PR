@@ -116,17 +116,25 @@ enb3r.disk_image = GLOBALS.SRSLTE_IMG
 iface6 = enb3r.addInterface("eth2")
 iface6.addAddress(rspec.IPv4Address("172.168.1.2", "255.255.255.0"))
 
-link = request.LAN("lan")
-link.addInterface(iface1)
-link.addInterface(iface2)
-link.addInterface(iface3)
-link.addInterface(iface4)
-link.addInterface(iface5)
-link.addInterface(iface6)
+# Create two separate LAN links
+link1 = request.LAN("lan")
+link2 = request.LAN("lan")
 
-link.link_multiplexing = True
-link.vlan_tagging = True
-link.best_effort = True
+# Add interfaces to each LAN link
+link1.addInterface(iface1)
+link1.addInterface(iface2)
+link1.addInterface(iface3)
+lin1k.addInterface(iface4)
+link1.addInterface(iface5)
+link2.addInterface(iface6)
+
+link1.link_multiplexing = True
+link1.vlan_tagging = True
+link1.best_effort = True
+
+link2.link_multiplexing = True
+link2.vlan_tagging = True
+link2.best_effort = True
 
 tour = IG.Tour()
 tour.Description(IG.Tour.MARKDOWN, tourDescription)

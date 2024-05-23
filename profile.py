@@ -113,7 +113,7 @@ iface5.addAddress(rspec.IPv4Address("10.10.1.5", "255.255.255.0"))
 enb3r = request.RawPC("enb3r")
 enb3r.hardware_type = GLOBALS.HWTYPE
 enb3r.disk_image = GLOBALS.SRSLTE_IMG
-iface6 = enb3r.addInterface("eth2")
+iface6 = enb3r.addInterface("eth1")
 iface6.addAddress(rspec.IPv4Address("172.168.1.2", "255.255.255.0"))
 
 # Create two separate LAN links
@@ -126,6 +126,8 @@ link1.addInterface(iface2)
 link1.addInterface(iface3)
 lin1k.addInterface(iface4)
 link1.addInterface(iface5)
+
+link2.addInterface(iface1a)
 link2.addInterface(iface6)
 
 link1.link_multiplexing = True

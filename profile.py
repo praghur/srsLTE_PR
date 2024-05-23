@@ -117,8 +117,8 @@ iface6 = enb3r.addInterface("eth1")
 iface6.addAddress(rspec.IPv4Address("172.168.1.2", "255.255.255.0"))
 
 # Create two separate LAN links
-link1 = request.LAN("lan")
-link2 = request.LAN("lan")
+link1 = request.LAN("lan1")
+link2 = request.LAN("lan2")
 
 # Add interfaces to each LAN link
 link1.addInterface(iface1)

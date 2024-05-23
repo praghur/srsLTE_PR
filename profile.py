@@ -131,7 +131,7 @@ link2 = request.LAN("lan2")
 link1.addInterface(iface1)
 link1.addInterface(iface2)
 link1.addInterface(iface3)
-lin1k.addInterface(iface4)
+link1.addInterface(iface4)
 link1.addInterface(iface5)
 
 link2.addInterface(iface1a)

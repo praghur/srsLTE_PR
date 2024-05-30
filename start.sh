@@ -13,6 +13,12 @@ elif [ $NODE_ID = "rue2" ]; then
 elif [ $NODE_ID = "rue3" ]; then
     chmod +x /local/repository/start-ue3.sh
    /local/repository/start-ue3.sh
+elif [ $NODE_ID = "ruet1" ]; then
+    chmod +x /local/repository/start-uet1.sh
+   /local/repository/start-uet1.sh
+elif [ $NODE_ID = "ruet2" ]; then
+    chmod +x /local/repository/start-uet2.sh
+   /local/repository/start-uet2.sh
 elif [ $NODE_ID = "enb1" ]; then
     chmod +x /local/repository/start-enb1.sh
     /local/repository/start-enb1.sh

@@ -25,11 +25,11 @@ elif [ $NODE_ID = "enb3r" ]; then
 elif [ $NODE_ID = "epc" ]; then
     chmod +x /local/repository/start-epc.sh
     chmod +x /etc/srslte/user_db.csv
-    /local/repository/start-epc.sh
     sudo echo "ue1,xor,001010123456789,00112233445566778899aabbccddeeff,opc,63bfa50ee6523365ff14c1f45f88737d,9001,000000001234,7,dynamic
     ue2,xor,001010123456790,00112233445566778899aabbccddeeee,opc,63bfa50ee6523365ff14c1f45f88737d,8000,000000001235,7,dynamic
     ue3,xor,001010123456791,00112233445566778899aabbccddffff,opc,63bfa50ee6523365ff14c1f45f88737d,7000,000000001236,7,dynamic" > /etc/srslte/user_db.csv
     echo "Text successfully written to user_db.csv"
+    /local/repository/start-epc.sh
 else
     echo "no setup necessary"
 fi

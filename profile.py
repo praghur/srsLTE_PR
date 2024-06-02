@@ -66,7 +66,8 @@ sudo srsue /local/repository/etc/ue.conf
 class GLOBALS(object):
     UBUNTU_1804_IMG = "urn:publicid:IDN+emulab.net+image+emulab-ops//UBUNTU18-64-STD"
     SRSLTE_IMG = "urn:publicid:IDN+emulab.net+image+PowderProfiles:U18LL-SRSLTE:2"
-    HWTYPE = "d430"
+    #HWTYPE = "d430"
+    HWTYPE = "d710"
 
 
 pc = portal.Context()

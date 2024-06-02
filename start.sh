@@ -29,6 +29,7 @@ elif [ $NODE_ID = "epc" ]; then
     #ue3,xor,001010123456791,00112233445566778899aabbccddffff,opc,63bfa50ee6523365ff14c1f45f88737d,7000,000000001236,7,dynamic" > /etc/srslte/user_db.csv
     #echo "Text successfully written to user_db.csv"
     chmod +x /local/repository/update_user_db.sh
+    sudo /local/repository/update_user_db.sh
     chmod +x /local/repository/start-epc.sh
     /local/repository/start-epc.sh
 else

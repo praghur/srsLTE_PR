@@ -10,7 +10,7 @@ tourDescription = """
 
 Use this profile to intantiate an end-to-end LTE network using simulated links
 between eNB and UE (sending baseband IQ samples back and forth via ZMQ instead
-of transmitting over the air via SDRs). Three d430 compute nodes will be
+of transmitting over the air via SDRs). Three d710 compute nodes will be
 deployed (`epc`, `enb1`, and `rue1`), each with srsLTE 20.04.1, and connected to
 the same LAN.
 

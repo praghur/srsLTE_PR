@@ -96,11 +96,11 @@ iface4 = enb2.addInterface("eth1")
 iface4.addAddress(rspec.IPv4Address("10.10.1.3", "255.255.255.0"))
 
 # Add LL UE1 node
-rue1 = request.RawPC("rue1")
-rue1.hardware_type = GLOBALS.HWTYPE
-rue1.disk_image = GLOBALS.SRSLTE_IMG
-iface3 = rue1.addInterface("eth1")
-iface3.addAddress(rspec.IPv4Address("10.10.1.4", "255.255.255.0"))
+#rue1 = request.RawPC("rue1")
+#rue1.hardware_type = GLOBALS.HWTYPE
+#rue1.disk_image = GLOBALS.SRSLTE_IMG
+#iface3 = rue1.addInterface("eth1")
+#iface3.addAddress(rspec.IPv4Address("10.10.1.4", "255.255.255.0"))
 
 # Add LL UEt1 node
 ruet1 = request.RawPC("ruet1")
@@ -144,7 +144,7 @@ link1 = request.LAN("lan1")
 # Add interfaces to each LAN link
 link1.addInterface(iface1)
 link1.addInterface(iface2)
-link1.addInterface(iface3)
+#link1.addInterface(iface3)
 link1.addInterface(iface3t)
 link1.addInterface(iface4)
 link1.addInterface(iface5)

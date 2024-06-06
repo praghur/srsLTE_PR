@@ -103,32 +103,32 @@ iface4.addAddress(rspec.IPv4Address("10.10.1.3", "255.255.255.0"))
 #iface3.addAddress(rspec.IPv4Address("10.10.1.4", "255.255.255.0"))
 
 # Add LL UEt1 node
-ruet1 = request.RawPC("ruet1")
-ruet1.hardware_type = GLOBALS.HWTYPE
-ruet1.disk_image = GLOBALS.SRSLTE_IMG
-iface3t = ruet1.addInterface("eth1")
-iface3t.addAddress(rspec.IPv4Address("10.10.1.9", "255.255.255.0"))
+#ruet1 = request.RawPC("ruet1")
+#ruet1.hardware_type = GLOBALS.HWTYPE
+#ruet1.disk_image = GLOBALS.SRSLTE_IMG
+#iface3t = ruet1.addInterface("eth1")
+#iface3t.addAddress(rspec.IPv4Address("10.10.1.9", "255.255.255.0"))
 
 # Add LL UE2 node
-rue2 = request.RawPC("rue2")
-rue2.hardware_type = GLOBALS.HWTYPE
-rue2.disk_image = GLOBALS.SRSLTE_IMG
-iface5 = rue2.addInterface("eth1")
-iface5.addAddress(rspec.IPv4Address("10.10.1.5", "255.255.255.0"))
+#rue2 = request.RawPC("rue2")
+#rue2.hardware_type = GLOBALS.HWTYPE
+#rue2.disk_image = GLOBALS.SRSLTE_IMG
+#iface5 = rue2.addInterface("eth1")
+#iface5.addAddress(rspec.IPv4Address("10.10.1.5", "255.255.255.0"))
 
 # Add LL UEt2 node
-ruet2 = request.RawPC("ruet2")
-ruet2.hardware_type = GLOBALS.HWTYPE
-ruet2.disk_image = GLOBALS.SRSLTE_IMG
-iface5t = ruet2.addInterface("eth1")
-iface5t.addAddress(rspec.IPv4Address("10.10.1.10", "255.255.255.0"))
+#ruet2 = request.RawPC("ruet2")
+#ruet2.hardware_type = GLOBALS.HWTYPE
+#ruet2.disk_image = GLOBALS.SRSLTE_IMG
+#iface5t = ruet2.addInterface("eth1")
+#iface5t.addAddress(rspec.IPv4Address("10.10.1.10", "255.255.255.0"))
 
 # Add LL UE3 node
-rue3 = request.RawPC("rue3")
-rue3.hardware_type = GLOBALS.HWTYPE
-rue3.disk_image = GLOBALS.SRSLTE_IMG
-iface7 = rue3.addInterface("eth1")
-iface7.addAddress(rspec.IPv4Address("10.10.1.7", "255.255.255.0"))
+#rue3 = request.RawPC("rue3")
+#rue3.hardware_type = GLOBALS.HWTYPE
+#rue3.disk_image = GLOBALS.SRSLTE_IMG
+#iface7 = rue3.addInterface("eth1")
+#iface7.addAddress(rspec.IPv4Address("10.10.1.7", "255.255.255.0"))
 
 # Add eNB3_Remote node
 enb3r = request.RawPC("enb3r")
@@ -145,16 +145,12 @@ link1 = request.LAN("lan1")
 link1.addInterface(iface1)
 link1.addInterface(iface2)
 #link1.addInterface(iface3)
-link1.addInterface(iface3t)
+#link1.addInterface(iface3t)
 link1.addInterface(iface4)
-link1.addInterface(iface5)
-link1.addInterface(iface5t)
+#link1.addInterface(iface5)
+#link1.addInterface(iface5t)
 link1.addInterface(iface6)
-link1.addInterface(iface7)
-
-#link2.addInterface(iface1a)
-#link2.addInterface(iface6)
-#link2.addInterface(iface7)
+#link1.addInterface(iface7)
 
 link1.link_multiplexing = True
 link1.vlan_tagging = True

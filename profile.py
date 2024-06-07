@@ -73,7 +73,7 @@ pc = portal.Context()
 request = pc.makeRequestRSpec()
 
 # Add EPC node
-epc = request.RawPC("epc")
+epc = request.RawPC()
 epc.hardware_type = GLOBALS.HWTYPE
 epc.disk_image = GLOBALS.SRSLTE_IMG
 iface1 = epc.addInterface("eth1")

@@ -1,41 +1,38 @@
 #!/bin/bash
-#Revision #1
-# Define your SSH username
-USERNAME="praghur"
 
-# List of user-defined node names (modify as needed)
-NODES=("pc759" "pc829" "pc827" "pc758" "pc828" "pc830" "pc826")
+# Define the list of nodes
+nodes=("pc829" "pc830" "pc833" "pc828" "pc826")
 
-# Loop through each node and open a detached terminal window
-for NODE in "${NODES[@]}"; do
-    # Construct the full hostname (e.g., pc425.emulab.net)
-    HOSTNAME="${NODE}.emulab.net"
-    
-    # Open a detached terminal window and SSH into the node
-    gnome-terminal --title="${NODE}" -- bash -c "ssh -o StrictHostKeyChecking=no ${USERNAME}@${HOSTNAME}; exec bash"
-done
+# Define the corresponding window titles
+#window_titles=("epc" "enb1" "ue1" "enb2" "ue2" "uet1" "uet2" "enb3" "ue3")
 
+# SSH username and hostname
+username="praghur"
+host_suffix=".emulab.net"
+#k=1;
+# Loop through the nodes and open Terminator windows with custom titles
+for i in "${!nodes[@]}"; do
+#	for k in "${!window_titles[@]}"; do
+    node="${nodes[$i]}"
+    num_windows=1
 
-####Revision #2
-#!/bin/bash
+    # Set the number of windows based on the index
+    if [ $i -eq 1 ]; then
+        num_windows=2
+    elif [ $i -eq 2 ]; then
+        num_windows=2
+    elif [ $i -eq 3 ]; then
+        num_windows=1
+    elif [ $i -eq 4 ]; then
+        num_windows=1
+    #elif [ $i -eq 5 ]; then
+    #    num_windows=2
+    fi
 
-# Define your SSH username
-USERNAME="praghur"
-
-# List of user-defined node names and the corresponding number of windows (modify as needed)
-NODES=("pc756" "pc745" "pc741" "pc753")
-WINDOWS=(1 3 3 2)
-
-# Loop through each node and open the specified number of detached terminal windows
-for i in "${!NODES[@]}"; do
-    NODE="${NODES[$i]}"
-    NUM_WINDOWS="${WINDOWS[$i]}"
-    
-    # Construct the full hostname (e.g., pc425.emulab.net)
-    HOSTNAME="${NODE}.emulab.net"
-    
-    # Open the specified number of detached terminal windows and SSH into the node
-    for _ in $(seq "$NUM_WINDOWS"); do
-        gnome-terminal --title="${NODE}" -- bash -c "ssh -o StrictHostKeyChecking=no ${USERNAME}@${HOSTNAME}; exec bash"
-    done
+    # Open the specified number of Terminator windows with custom titles
+    for ((j=1; j<=$num_windows; j++)); do
+#        title="${window_titles[k]}"
+        terminator -e "ssh -o StrictHostKeyChecking=no ${username}@${node}${host_suffix}" --title="${title}" &
+ #   done
+    	done
 done
